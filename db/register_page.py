@@ -3,6 +3,8 @@ import streamlit as st
 import sqlite3
 import hashlib
 
+from utilities.constants import *
+
 
 def insert_user(conn, username, password):
     hash_password = hashlib.md5(password.encode()).hexdigest()
@@ -19,7 +21,7 @@ def main():
         register_button = st.form_submit_button('Register')
 
         if register_button:
-            conn = sqlite3.connect('users.db')
+            conn = sqlite3.connect(USERS_DB)
             insert_user(conn, username, password)
             st.success(f'User {username} registered successfully!')
             conn.close()

@@ -1,11 +1,12 @@
+from utilities.constants import *
 import streamlit as st
 import sqlite3
 import hashlib
 
-
 def check_user(conn, username, password):
     hash_password = hashlib.md5(password.encode()).hexdigest()
     cursor = conn.cursor()
+
     cursor.execute("SELECT * FROM users WHERE username=? AND password=?", (username, hash_password))
     user = cursor.fetchone()
     return user
@@ -21,7 +22,7 @@ def main():
 
     # Move the navigation button outside the form
     if login_button:
-        conn = sqlite3.connect('users.db')
+        conn = sqlite3.connect(USERS_DB)
         user = check_user(conn, username, password)
         if user:
             print('Log In Successful !')
@@ -34,7 +35,7 @@ def main():
     if st.button('Go to Register Page'):
         st.session_state['page'] = 'register'
         st.experimental_rerun()
-print('Session State ', st.session_state)
+
 if 'logged_in' not in st.session_state:
     st.session_state['logged_in'] = False
 
@@ -49,10 +50,10 @@ if st.session_state.page == 'login' and not st.session_state.logged_in:
 elif st.session_state.page == 'register':
     st.experimental_memo.clear()
     st.experimental_singleton.clear()
-    exec(open('register_page.py').read())
+    exec(open('register_user.py').read())
 
 # This block will only be executed if the user is successfully logged in
 # Redirection handling; move this block right before the last line of the script.
 if 'logged_in' in st.session_state and st.session_state['logged_in'] and st.session_state['page'] == 'success':
     print('INSIDE !!!')
-    exec(open('success_page.py').read())
+    exec(open('option_selection.py').read())

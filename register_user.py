@@ -1,5 +1,9 @@
+import hashlib
+
 import streamlit as st
 import sqlite3
+
+from utilities.constants import *
 from sqlite3 import Error
 
 # Function to create a connection to the SQLite database
@@ -19,7 +23,7 @@ def create_table(conn):
     create_sql = """
     CREATE TABLE IF NOT EXISTS users (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        username TEXT NOT NULL,
+        username TEXT UNIQUE NOT NULL,  -- Added UNIQUE constraint to enforce uniqueness
         name TEXT NOT NULL,
         password TEXT NOT NULL
     );
@@ -38,12 +42,30 @@ def insert_user(conn, username, name, password):
         c.execute(insert_sql, (username, name, password))
         conn.commit()
         return c.lastrowid
+    except sqlite3.IntegrityError as e:  # Catch IntegrityError for duplicate username
+        st.error("Username already exists. Please choose a different username.")
+        return None
     except Error as e:
         st.error(e)
         return None
 
+# Function to check if a username already exists
+def check_username_exists(conn, username):
+    select_sql = '''SELECT id FROM users WHERE username = ?'''
+    try:
+        c = conn.cursor()
+        c.execute(select_sql, (username,))
+        row = c.fetchone()
+        if row:
+            return True  # Username exists
+        else:
+            return False  # Username doesn't exist
+    except Error as e:
+        st.error(e)
+        return False
+
 # Initialize database connection and table
-conn = create_connection('users.db')
+conn = create_connection(USERS_DB)
 if conn is not None:
     create_table(conn)
 
@@ -54,14 +76,16 @@ with st.form("user_registration_form", clear_on_submit=True):
     username = st.text_input("Username", key="username")
     name = st.text_input("Name", key="email")
     password = st.text_input("Password", type="password", key="password")
+    hash_password = hashlib.md5(password.encode()).hexdigest()
     submit_button = st.form_submit_button("Register")
 
     if submit_button:
-        user_id = insert_user(conn, username, name, password)
-        if user_id:
-            st.success(f"User {username} registered successfully with ID {user_id}")
+        if check_username_exists(conn, username):
+            st.error("Username already exists. Please choose a different username.")
         else:
-            st.error("Failed to register user")
+            user_id = insert_user(conn, username, name, hash_password)
+            if user_id:
+                st.success(f"User {username} registered successfully with ID {user_id}")
 
 if conn:
     conn.close()
