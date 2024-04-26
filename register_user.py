@@ -19,20 +19,6 @@ def create_connection(db_file):
     return conn
 
 # Function to create a table (if it doesn't exist)
-def create_table(conn):
-    create_sql = """
-    CREATE TABLE IF NOT EXISTS users (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        username TEXT UNIQUE NOT NULL,  -- Added UNIQUE constraint to enforce uniqueness
-        name TEXT NOT NULL,
-        password TEXT NOT NULL
-    );
-    """
-    try:
-        c = conn.cursor()
-        c.execute(create_sql)
-    except Error as e:
-        st.error(e)
 
 # Function to insert a new user into the users table
 def insert_user(conn, username, name, password):
@@ -66,8 +52,6 @@ def check_username_exists(conn, username):
 
 # Initialize database connection and table
 conn = create_connection(USERS_DB)
-if conn is not None:
-    create_table(conn)
 
 # Streamlit UI
 st.title('User Registration')

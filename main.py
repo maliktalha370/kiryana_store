@@ -1,5 +1,5 @@
 # from gahak.sales_entry import main
-from khata.search_panel import main
+from gahak.selection_gahak_khata import main
 
 main()
 

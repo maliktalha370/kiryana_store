@@ -55,5 +55,4 @@ elif st.session_state.page == 'register':
 # This block will only be executed if the user is successfully logged in
 # Redirection handling; move this block right before the last line of the script.
 if 'logged_in' in st.session_state and st.session_state['logged_in'] and st.session_state['page'] == 'success':
-    print('INSIDE !!!')
-    exec(open('option_selection.py').read())
+    exec(open('selection_gahak_khata.py').read())

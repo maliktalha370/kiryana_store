@@ -30,10 +30,15 @@ def main():
     if col1.button("gahak"):
         st.write("You clicked 'gahak'.")
         # You can add more functionality related to 'gahak' here
+        exec(open('gahak/sales_entry.py').read())
+
+
 
     if col2.button("Khata"):
         st.write("You clicked 'Khata'.")
         # You can add more functionality related to 'Khata' here
+        exec(open('khata/search_panel.py').read())
+
 
 
 if __name__ == "__main__":
