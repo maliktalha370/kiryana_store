@@ -28,7 +28,9 @@ def main():
 
             st.session_state['page'] = 'login'
             st.experimental_rerun()
-
+    if st.sidebar.button("Logout"):
+        st.session_state.clear()  # Clear session state upon logout
+        st.switch_page('login_page.py')
 
 if 'page' not in st.session_state:
     st.session_state.page = 'register'

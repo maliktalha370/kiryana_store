@@ -16,13 +16,10 @@ def delete_product(index):
 
 
 product_names = get_products()
-print('PRODUCT NAMES ', product_names)
 def main():
     st.title(TITLE)
     st.sidebar.title("Customer Details")
-    # Inputs for customer details
-    customer_name = st.sidebar.text_input("Name")
-    customer_mobile = st.sidebar.text_input("Mobile Number")
+
 
     now = datetime.datetime.now()
     date_time = now.strftime('%Y-%m-%d %H:%M:%S')
@@ -31,6 +28,11 @@ def main():
 
     if 'products' not in st.session_state:
         st.session_state['products'] = []
+
+
+    # Inputs for customer details
+    customer_name = st.sidebar.text_input("Name", key='customer_name')
+    customer_mobile = st.sidebar.text_input("Mobile Number", key='customer_mobile')
 
     # Button to add new product entries
     if st.button("Add Item"):
@@ -84,7 +86,8 @@ def main():
             amount_paid = st.number_input("**Total Deposited**", min_value=0, value = grand_total)
             remaining_amount = grand_total - amount_paid
 
-        if st.button("Submit Sale"):
+        if st.button("Print & Submit Sale"):
+            print(st.session_state['products'])
             if len(customer_name) <= 0 or len(customer_mobile) <= 0:
                 st.error('Alert! Enter Customer Name and Mobile Number')
             else:
@@ -98,13 +101,17 @@ def main():
                     discount,
                     amount_paid,
                     remaining_amount,
+                    st.session_state['products'],
                     f'bills/{customer_name}/'
                 )
-
                 print('Sales added in Database !!!')
                 st.success("Sale  submitted successfully!")
                 st.session_state['products'] = []
-                reset_form()
 
+
+        st.button("Reset", on_click=reset_form)
+    if st.sidebar.button("Logout"):
+        st.session_state.clear()  # Clear session state upon logout
+        st.switch_page('login_page.py')
 if __name__ == "__main__":
     main()

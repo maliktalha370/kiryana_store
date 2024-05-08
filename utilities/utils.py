@@ -4,16 +4,18 @@ import streamlit as st
 from PIL import Image, ImageDraw, ImageFont
 
 def reset_form():
+
     for key in st.session_state.keys():
-        del st.session_state[key]
-    customer_keys = ['customer_name', 'customer_mobile']
-    for key in customer_keys:
-        if key in st.session_state:
+
             del st.session_state[key]
 
-    st.rerun()
+    st.session_state.customer_name = ''
+    st.session_state.customer_mobile = ''
 
-def generate_enhanced_bill_image(title, customer_name, customer_mobile, total_price, discount, amount_paid, remaining_amount, file_path='enhanced_bill.png'):
+    # st.rerun()
+    # st.cache_data.clear()
+
+def generate_enhanced_bill_image(title, customer_name, customer_mobile, total_price, discount, amount_paid, remaining_amount, product_lists, file_path='enhanced_bill.png'):
     # Create a blank white image - Adjust the size if needed for your printer
     if not os.path.exists(file_path):
         os.makedirs(file_path, exist_ok=True)

@@ -1,3 +1,4 @@
+import hashlib
 import sqlite3
 from utilities.constants import *
 
@@ -36,9 +37,6 @@ def get_customer_data(mobile_number):
     return data
 
 
-import sqlite3
-
-
 def get_last_10_sales(mobile_number):
     # Connect to your SQLite database
     conn = sqlite3.connect(SALES_DB)
@@ -62,3 +60,11 @@ def get_last_10_sales(mobile_number):
     conn.close()
 
     return results
+
+def check_user(conn, username, password):
+    hash_password = hashlib.md5(password.encode()).hexdigest()
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT * FROM users WHERE username=? AND password=?", (username, hash_password))
+    user = cursor.fetchone()
+    return user
