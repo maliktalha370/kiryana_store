@@ -17,6 +17,7 @@ def add_product(product_name):
     connection.close()
 
 def add_sale(customer_id, date_time, discount, amount_paid, total_price, grand_total, remaining_amount):
+    print('Add Sale Called !!!')
     connection = sqlite3.connect(SALES_DB)
     cursor = connection.cursor()
     cursor.execute('''INSERT INTO Sales (customer_id, date_time, discount, amount_paid, total_price, 
@@ -60,7 +61,7 @@ def add_customer(name, mobile_number):
     return customer_id
 
 def search_customer(mobile_number):
-    print('Add Customer Called !!')
+    print('Search Customer Called !!')
     connection = sqlite3.connect(SALES_DB)
     cursor = connection.cursor()
 
