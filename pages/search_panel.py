@@ -41,23 +41,15 @@ def main():
             st.sidebar.write(f"Total Sales: **Rs {record[1]:.2f}**", key="sales")
             st.sidebar.write(f"Udhaar: **Rs {record[2]:.2f}**", format="%d", step=1, key="udhaar")
             wasooli = st.sidebar.number_input("**Wasooli**", format="%d", step=1, key="wasooli")
-            print('Wasooli ', wasooli)
             customer_id = search_customer(customer_mobile)
             wasooli = -1 * wasooli
             if customer_id is None:
                 st.error('Alert! Customer ID not found')
             else:
-                print('Wasooli 5.a !!', wasooli)
-                print('Session States ')
-                for key in st.session_state.keys():
-                    print(f'Session States {key} | {st.session_state[key]} ')
                 if st.sidebar.button("Submit Wasooli"):
-                    print('Wasooli 5.b !!')
                     add_sale(customer_id, date_time, 0, 0, 0, 0, wasooli)
-                    print('Wasooli 6 !!')
                     reset()
-                else:
-                    print('SideBar Else !!')
+
         else:
 
             st.write("No record found for the given mobile number.")
