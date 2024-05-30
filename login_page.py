@@ -32,7 +32,8 @@ def main():
                 st.error('Incorrect Username/Password')
 
         if st.button('Go to Register Page'):
-            st.session_state['page'] = 'register'
+            # st.session_state['page'] = 'register'
+            st.switch_page("pages/register_page.py")
             st.rerun()
 
 main()

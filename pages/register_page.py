@@ -2,6 +2,7 @@
 import streamlit as st
 import sqlite3
 import hashlib
+from st_pages import hide_pages
 
 from utilities.constants import *
 
@@ -10,11 +11,11 @@ def insert_user(conn, username, password):
     hash_password = hashlib.md5(password.encode()).hexdigest()
     conn.execute('INSERT INTO users (username, password) VALUES (?, ?)', (username, hash_password))
     conn.commit()
-
+    
 
 def main():
     st.title('Register New User')
-
+    hide_pages(["sales_entry", "search_panel", "Add_Product"])
     with st.form('Register Form'):
         username = st.text_input('Username')
         password = st.text_input('Password', type='password')
