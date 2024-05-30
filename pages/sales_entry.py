@@ -41,20 +41,21 @@ def main():
     total_price = 0
 
     for index, product in enumerate(st.session_state['products']):
-        cols = st.columns([3, 2, 3, 2, 3, 2, 2])
+        cols = st.columns([6, 2, 3, 2, 3, 2, 3])
 
         with cols[0]:
             # Dynamic selection for the product name
             product['name'] = st.selectbox("Product Name", options=product_names, index=0, key=f"name{index}")
+
         with cols[1]:
             # Input for quantity
-            product['quantity'] = st.number_input("Quantity", min_value=0, value=product['quantity'], key=f"quantity{index}")
+            product['quantity'] = st.number_input("Qnt", min_value=0, value=product['quantity'], key=f"quantity{index}")
         with cols[2]:
             # Dynamic selection for the unit
             product['unit'] = st.selectbox("Unit", options=units, index=0, key=f"unit{index}")
         with cols[3]:
             # Input for unit price
-            product['unit_price'] = st.number_input("Unit Price", min_value=0, value=product['unit_price'], key=f"unit_price{index}")
+            product['unit_price'] = st.number_input("U. Price", min_value=0, value=product['unit_price'], key=f"unit_price{index}")
         with cols[4]:
             # Calculate and display price
             product['price'] = product['quantity'] * product['unit_price']

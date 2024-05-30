@@ -63,7 +63,7 @@ def create_sales_db_and_tables(SALES_DB):
     connection.close()
 
 if __name__ == '__main__':
-    create_user_credentials_table(USERS_DB)
-    print("USER's table created !!")
+    # create_user_credentials_table(USERS_DB)
+    # print("USER's table created !!")
     create_sales_db_and_tables(SALES_DB)
     print("Sale's table created !!")

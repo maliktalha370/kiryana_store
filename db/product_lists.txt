@@ -1,0 +1,297 @@
+Shappar
+Sugar
+Dalda Ghee 1kg
+Dalda Oil 1kg
+Ghee 900g
+Oil 900g
+Lipton 900g
+Lipton 450g
+Lipton 170g
+Lipton 90g
+Supreme 900g
+Supreme 450g
+Supreme 170g
+Supreme 90g
+Qamar 900g
+Qamar 450g
+Qamar 170g
+Vital 900g
+Vital 450g
+Vital 170g
+Tapal Danedar 900g
+Tapal Danedar 450g
+Tapal Danedar 170g
+Tapal Danedar 90g
+Tissue Roll
+Food Colour
+Tea 100Rs
+Tea 50 Rs
+Tea 20 Rs
+Tea 10 Rs
+Surf Powder
+Surf Exel 1Kg
+Surf Exel 500g
+Surf Exel 50 Rs
+Surf Exel 10 Rs
+Bright 1kg
+Bright 500g
+Bright 50 Rs
+Bright 10 Rs
+Express 1Kg
+Express 500g
+Express 50 Rs
+Express 10 Rs
+Ariel 1kg
+Ariel 500g
+Ariel 50 Rs
+Ariel 10 Rs
+Bonus 1kg
+Bonus 100 Rs
+Bonus 50 Rs
+Bonus 10 Rs
+Moli 1kg
+Moli 50 Rs
+Moli 10 Rs
+Sunlight 800g
+Sunlight 100 Rs
+Binding Rolls
+Macaroni
+Lux
+Safe Guard
+Dettol
+Palmolive
+Capri
+Lifebuoy
+Savannah
+Lemon Max
+Lemon Max Liquid
+Lemon Max
+Lemon Max Antibacterial
+Spunch
+Tissue Pack
+Daal Channa
+Daal Mong
+Daal Masod Sabat
+Daal Masod Dhuli
+Daal Mash
+Daal Mash Sabat
+Safad Channa
+Kala Channa
+Laal Lobia
+Safad Lobia
+Barik Channa
+Daal Mong Chalka
+Rice Inam Steam
+Rice Super
+Rice 86
+Rice Adhwar
+Rice Tota
+Rice MOTA
+Rice Sahala
+Rice Kainat Dagi
+Rice Super Dagi
+Meda
+Soji
+Behsan
+Mirch 250g
+Mirch 100g
+Mirch 50g
+Haldi 250g
+Haldi 100g
+Haldi 50g
+Dhania 250g
+Dhania 50g
+Mujral
+
+Salt
+Wanda
+Khul
+Chokar
+Khul JAMA
+Halia Salum
+Halia
+Jamaa
+Jamaa Salum
+Alsi
+Alsi Salum
+Methra
+Methra Salum
+Shakar
+Gurr Awwal
+Gurr Doam
+Bajra
+Gandum
+Gandum Dalia
+Noodles
+Hygiene Laser
+Shalimar Mirch Masala
+Cornflour
+Atta 15kg
+Atta 20kg
+Fine Atta 20kg
+Fine Atta 80kg
+White Salanty
+Colourful Slanty
+Special Slanty
+Popcorns
+Ballia
+Makai
+Makai Atta
+Peway
+Garm Masalla
+Zeera
+Khopra
+Badian Khathai
+Daal Channa
+Mooti Elachi
+Sabz Elachi
+Giri Burada
+Sudh
+White Pepper
+Black Pepper
+Laung
+Meva
+Chuara
+Baadam Giri
+Imli
+Allo Bukhara
+Sago Dana
+Kalwanji
+Nishri
+Bhutkari
+Methi Danna
+Ajwain
+Saunf
+Khuskas
+Green Tea
+Lemon Grass
+Metha Soda
+Glucose
+Cornflour
+Black Salt
+Dhania Salum
+Pop Soap
+Black Soap
+Red Dhara Mirch
+Anar Dana
+Isphaghol
+Kaali Zeeri
+Corn Flour
+Tukh Malanga
+Johar Joshanda
+Chicken Cube
+Pulao Cube
+Olpers Liter
+Olpers 225ml
+Black Shoe Polish
+Brown Shoe Polish
+Irani Cream
+Garm Masalla Powder
+Black Pepper Powder
+Neel Powder
+Sufi Soap
+Rewari 1kg
+Rewari Half kg
+Sarso Oil
+Jamma Oil
+Tang Pouch
+Tang Jar
+Jam Balti
+Achar Balti 5kg
+Achar Balti 10 kg
+Nido 1kg
+Nido Half kg
+Custard
+Ras Malai
+Sheer Khorma
+Phenyl
+Matches
+Mortein Coil
+Brown Polish
+Jharo Baint
+Phool Jharo
+Murghi Dana
+
+Brush
+Colgate 20g
+Colgate 40g
+Colgate 75g
+Colgate 100g
+Colgate 150g
+Medicam 180g
+Medicam 65g
+Medicam 35g
+Sensodyne 100ml
+Harpic 500g
+Harpic 250g
+Harpic Red 250g
+Tehzab
+Neel
+Bleach
+R/B 250g
+R/B 500g
+Ketchup 800g
+Ketchup 400g
+Ketchup 200g
+Kheer Mix
+Custard
+Jelly
+Knorr Cube
+Jam
+Namak Iodine
+Black Cobra Spray
+Phelwan Rewari
+Yeast
+Biryani Masala
+Korma Masala
+Achar Gosht
+Karahi Gosht
+Chat Masala
+Methi Qasori
+Sawayan Rangdar
+Sawayan Barik
+Sawayan Moti
+Sirka
+Radi Akhbar
+Radi Khaki
+Murabba Saib
+Murabba Gajar
+Murabba Ashrafi
+Bio Amla Shampoo
+Sunsilk Shampoo (Small)
+Sunsilk Shampoo (Medium)
+Sunsilk Shampoo (Large)
+Lifebuoy Shampoo (Small)
+Lifebuoy Shampoo (Medium)
+Lifebuoy Shampoo (Large)
+Dove Shampoo
+Palmolive Shampoo
+Fair & Lovely Tube
+Fair & Lovely Jar
+Golden Perl
+Medora Powder
+Tibet Powder
+Black Cat Powder
+ShahTaj Oil Tin
+ShahTaj Ghee 2.5 kg Balti
+Gupshup 220 ml
+Gupshup 175 ml
+Dalda Ghee 5 kg Tin
+Dalda Oil 5 kg Box
+Sufi Oil 5 kg Box
+Sufi Ghee 5 kg Tin
+Sufi Ghee 1 kg
+Sufi Oil 1 kg
+Sufi Oil 3 Litre Bottle
+Sufi Oil 5 Litre Bottle
+Sufi Ghee 2.5 kg Tin
+Local Ghee Balti
+Dalda Ghee 2.5 kg Tin
+Dalda Oil 2.5 kg Tin
+Zaiqa Ghee 5kg Balti
+Zaiqa Oil Tin
+Zaiqa Oil 2.5 Balti
+Shah Taj Ghee Box
+ShahTaj Oil Box
+ShahTaj Ghee 5 kg Balti
+ShahTaj 16 kg Balti
